@@ -8,14 +8,12 @@ import Layout from "../layouts/Layout.astro";
       <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl">t-rosa.com</h1>
     </header>
     <main class="grid grid-rows-[1fr_auto_1fr] place-items-center">
-      <h2 class="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
         I build software for the web
       </h2>
-      <p class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">...</p>
+      <p class="text-6xl">...</p>
       <div>
-        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
-          Mainly with React
-        </h2>
+        <h2 class="text-6xl">Mainly with React</h2>
         <h3 class="text-center mt-3 text-zinc-400">
           but this one is build with Astro.
         </h3>
