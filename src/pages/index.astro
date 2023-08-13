@@ -1,15 +1,69 @@
 ---
+import logo from "../assets/logo.svg";
+import github from "../assets/github.svg";
+import linkedin from "../assets/linkedin.svg";
+import mail from "../assets/mail.svg";
+import { Image } from "astro:assets";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Toma Rosa</title>
+  </head>
+  <body class="h-full text-zinc-50 antialiased">
+    <main class="flex flex-col space-y-12 items-center justify-center h-full">
+      <nav class="flex space-x-6">
+        <a
+          data-github
+          href="https://github.com/t-rosa"
+          class="hover:scale-125 duration-300"
+        >
+          <Image src={github} alt="Github" class="w-10" />
+        </a>
+        <a
+          data-linkedin
+          href="https://www.linkedin.com/in/toma-rosa/"
+          class="hover:scale-125 duration-300"
+        >
+          <Image src={linkedin} alt="Linkedin" class="w-10" />
+        </a>
+        <a
+          data-mail
+          href="mailto:toma.rosa@protonmail.com"
+          class="hover:scale-125 duration-300"
+        >
+          <Image src={mail} alt="Mail" class="w-10" />
+        </a>
+      </nav>
+      <Image src={logo} alt="Toma Rosa logo." class="w-64" />
+    </main>
+  </body>
 </html>
+
+<style>
+  body {
+    background: radial-gradient(
+        farthest-corner circle,
+        #4788c5 0%,
+        #2f1846 50%,
+        #09090b 100%
+      )
+      bottom right / 250% 350%;
+
+    @apply duration-1000;
+  }
+
+  body:has(a[data-github]:hover) {
+    @apply bg-[right_bottom];
+  }
+  body:has(a[data-linkedin]:hover) {
+    @apply bg-[center_bottom];
+  }
+  body:has(a[data-mail]:hover) {
+    @apply bg-[left_bottom];
+  }
+</style>
