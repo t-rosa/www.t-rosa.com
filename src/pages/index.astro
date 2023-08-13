@@ -12,13 +12,13 @@ import { Image } from "astro:assets";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Toma Rosa web developper" />
     <title>Toma Rosa</title>
   </head>
   <body class="h-full text-zinc-50 antialiased">
     <main class="flex flex-col space-y-12 items-center justify-center h-full">
       <nav class="flex space-x-6">
         <a
-          data-github
           href="https://github.com/t-rosa"
           class="hover:scale-125 duration-300"
         >
@@ -57,12 +57,10 @@ import { Image } from "astro:assets";
     @apply duration-1000;
   }
 
-  body:has(a[data-github]:hover) {
-    @apply bg-[right_bottom];
-  }
   body:has(a[data-linkedin]:hover) {
     @apply bg-[center_bottom];
   }
+
   body:has(a[data-mail]:hover) {
     @apply bg-[left_bottom];
   }
