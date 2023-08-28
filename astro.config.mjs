@@ -7,5 +7,6 @@ export default defineConfig({
   integrations: [tailwind()],
   experimental: {
     assets: true,
+    viewTransitions: true,
   },
 });

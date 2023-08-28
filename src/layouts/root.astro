@@ -1,0 +1,38 @@
+---
+import "@/styles/globals.css";
+import { ViewTransitions } from "astro:transitions";
+---
+
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Toma Rosa web developper portfolio website"
+    />
+    <title>Toma Rosa</title>
+
+    <ViewTransitions />
+  </head>
+  <body class="h-full antialiased">
+    <main class="flex flex-col space-y-12 items-center justify-center h-full">
+      <slot />
+    </main>
+    <style>
+      body {
+        background: radial-gradient(
+            farthest-corner circle,
+            #4788c5 0%,
+            #2f1846 50%,
+            #09090b 100%
+          )
+          bottom right / 250% 350%;
+
+        @apply duration-1000;
+      }
+    </style>
+  </body>
+</html>
