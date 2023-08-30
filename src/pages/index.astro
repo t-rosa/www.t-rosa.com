@@ -3,7 +3,6 @@ import logo from "@/assets/logo.svg";
 import github from "@/assets/github.svg";
 import linkedin from "@/assets/linkedin.svg";
 import mail from "@/assets/mail.svg";
-import appWindow from "@/assets/app-window.svg";
 import { Image } from "astro:assets";
 import RootLayout from "@/layouts/root.astro";
 ---
@@ -26,13 +25,6 @@ import RootLayout from "@/layouts/root.astro";
       class="hover:scale-125 duration-300"
     >
       <Image src={mail} alt="Mail" class="w-10" />
-    </a>
-    <a
-      data-projects
-      href="/projects/"
-      class="hover:scale-125 duration-300 col-[2/3]"
-    >
-      <Image src={appWindow} alt="Projects" class="w-10" />
     </a>
   </nav>
   <Image src={logo} alt="Toma Rosa logo." class="w-64" />
