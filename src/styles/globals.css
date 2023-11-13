@@ -32,7 +32,7 @@
     @apply border-border;
   }
   html {
-	  background: #2f1846;
+	  @apply overflow-hidden;
   }
   body {
     font-feature-settings: "rlig" 1, "calt" 1;
