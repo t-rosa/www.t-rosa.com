@@ -31,8 +31,18 @@
   * {
     @apply border-border;
   }
+  html {
+	  background: #2f1846;
+  }
   body {
-    @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+	background: radial-gradient(
+	    farthest-corner circle,
+	    #4788c5 0%,
+	    #2f1846 50%,
+	    #09090b 100%
+	  )
+	  bottom right / 250% 350%;
+        @apply duration-1000 text-foreground;
   }
 }
