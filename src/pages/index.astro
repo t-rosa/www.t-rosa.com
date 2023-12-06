@@ -1,33 +1,35 @@
 ---
-import logo from "@/assets/logo.svg";
 import github from "@/assets/github.svg";
 import linkedin from "@/assets/linkedin.svg";
+import logo from "@/assets/logo.svg";
 import mail from "@/assets/mail.svg";
-import { Image } from "astro:assets";
 import RootLayout from "@/layouts/root.astro";
+import { Image } from "astro:assets";
 ---
 
 <RootLayout>
-  <nav class="grid grid-cols-3 gap-6">
-    <a href="https://github.com/t-rosa" class="hover:scale-125 duration-300">
-      <Image src={github} alt="Github" class="w-10" />
-    </a>
-    <a
-      data-linkedin
-      href="https://www.linkedin.com/in/toma-rosa/"
-      class="hover:scale-125 duration-300"
-    >
-      <Image src={linkedin} alt="Linkedin" class="w-10" />
-    </a>
-    <a
-      data-mail
-      href="mailto:toma.rosa@protonmail.com"
-      class="hover:scale-125 duration-300"
-    >
-      <Image src={mail} alt="Mail" class="w-10" />
-    </a>
-  </nav>
-  <Image src={logo} alt="Toma Rosa logo." class="w-64" />
+  <main class="h-full flex flex-col items-center justify-center gap-12">
+    <nav class="flex gap-12 items-center">
+      <a href="https://github.com/t-rosa" class="hover:scale-125 duration-300">
+        <Image src={github} alt="Github" class="w-10" />
+      </a>
+      <a
+        data-linkedin
+        href="https://www.linkedin.com/in/toma-rosa/"
+        class="hover:scale-125 duration-300"
+      >
+        <Image src={linkedin} alt="Linkedin" class="w-10" />
+      </a>
+      <a
+        data-mail
+        href="mailto:toma.rosa@protonmail.com"
+        class="hover:scale-125 duration-300"
+      >
+        <Image src={mail} alt="Mail" class="w-10" />
+      </a>
+    </nav>
+    <Image src={logo} alt="Toma Rosa logo." class="w-64" />
+  </main>
 </RootLayout>
 
 <style>
