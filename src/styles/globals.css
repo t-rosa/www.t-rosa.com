@@ -32,9 +32,14 @@
     @apply border-border;
   }
   html {
-	  @apply h-full scroll-smooth bg-[#2f1846];
+	  @apply  h-full;
   }
+
   body {
+    @apply h-full text-foreground;
+  }
+
+  #background {
     font-feature-settings: "rlig" 1, "calt" 1;
 	  background: radial-gradient(
 	    farthest-corner circle,
@@ -43,6 +48,6 @@
 	    #09090b 100%
 	  )
 	  bottom right / 250% 350%;
-    @apply duration-1000 text-foreground scroll-smooth h-full;
+    @apply duration-1000  min-h-full;
   }
 }

@@ -4,20 +4,17 @@ import { ViewTransitions } from "astro:transitions";
 ---
 
 <html lang="en" class="h-full">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <meta
-      name="description"
-      content="Toma Rosa web developper portfolio website"
-    />
-    <title>Toma Rosa</title>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="description" content="Toma Rosa web developper portfolio website" />
+        <title>Toma Rosa</title>
 
-    <ViewTransitions />
-  </head>
-  <body >
-      <slot />
-  </body>
+        <ViewTransitions />
+    </head>
+    <body>
+        <slot />
+    </body>
 </html>
