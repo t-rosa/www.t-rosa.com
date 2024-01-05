@@ -31,8 +31,9 @@
   * {
     @apply border-border;
   }
+
   html {
-	  @apply  h-full;
+	  @apply h-full bg-[#2f1846];
   }
 
   body {
@@ -48,6 +49,7 @@
 	    #09090b 100%
 	  )
 	  bottom right / 250% 350%;
+
     @apply duration-1000  min-h-full;
   }
 }
