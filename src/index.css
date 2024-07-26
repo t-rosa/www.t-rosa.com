@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+#container {
+    background: radial-gradient(
+        farthest-corner circle,
+        #4788c57e 0%,
+        #2f18466c 50%,
+        #09090b2f 70%
+    )
+    bottom right / 250% 350%;
+
+    transition-duration: 800ms;
+}
+
+#container:has([data-linkedin]:hover) {
+    @apply bg-[left_bottom];
+}
+
 #hello {
-    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👋</text></svg>") 16 0,auto; /*!emojicursor.app*/
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👋</text></svg>") 16 0,auto; 
 }
