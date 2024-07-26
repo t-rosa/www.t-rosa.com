@@ -1,6 +1,5 @@
 ---
 import "@/styles/globals.css";
-import { ViewTransitions } from "astro:transitions";
 ---
 
 <html lang="en" class="h-full">
@@ -10,11 +9,9 @@ import { ViewTransitions } from "astro:transitions";
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <meta name="description" content="Toma Rosa web developper portfolio website" />
-        <title>Toma Rosa</title>
-
-        <ViewTransitions />
+        <title>t-rosa</title>
     </head>
-    <body>
+    <body class="bg-[url('pattern.jpg')] text-zinc-100">
         <slot />
     </body>
 </html>
