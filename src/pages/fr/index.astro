@@ -1,31 +1,110 @@
 ---
-import GithubLink from "@/components/icons/github-icon.astro";
-import LinkedinLink from "@/components/icons/linkedin-icon.astro";
-import Header from "@/components/header.astro";
 import RootLayout from "@/layouts/root.astro";
+import Header from "@/components/header.astro";
 import Networks from "@/components/networks.astro";
+import ViteIcon from "@/components/icons/vite-icon.astro";
+import ReactIcon from "@/components/icons/react-icon.astro";
+import TypescriptIcon from "@/components/icons/typescript-icon.astro";
+import CSharpIcon from "@/components/icons/c-sharp-icon.astro";
+import CPlusPlusIcon from "@/components/icons/cplusplus-icon.astro";
+import NextjsIcon from "@/components/icons/nextjs-icon.astro";
+import TailwindcssIcon from "@/components/icons/tailwindcss-icon.astro";
+import SanityIcon from "@/components/icons/sanity-icon.astro";
+import DockerIcon from "@/components/icons/docker-icon.astro";
+import PostgresqlIcon from "@/components/icons/postgresql-icon.astro";
+import Project from "@/components/project.astro";
 ---
 
-<RootLayout class="bg-[url('pattern.jpg')] text-zinc-100">
+<RootLayout>
     <Header>
-        <a href="/" title="Passer en anglais">
+        <a href="/" title="Version anglaise">
             <img
                 src="/gb.svg"
                 class="size-9 rounded-full border border-zinc-700"
             />
         </a>
     </Header>
-    <section class="flex justify-center py-24 px-1">
-        <div class="space-y-9 text-center">
+    <main>
+        <section
+            class="flex justify-center py-24 px-1 flex-col text-center items-center gap-6"
+        >
             <h1 class="text-6xl font-black">Hello 👋</h1>
             <p class="text-xl text-zinc-300 max-w-80">
                 Je m'appelle Toma, je suis ingénieur logiciel et aujourd'hui je
-                travaille chez <a
+                travaille chez
+                <a
+                    target="_blank"
+                    rel="noreferrer"
                     class="underline hover:text-indigo-500 duration-100"
                     href="https://www.astradal.com/">Astradal</a
-                > à Toulouse.
+                >
+                à Toulouse.
             </p>
             <Networks />
-        </div>
-    </section>
+        </section>
+        <section id="projects">
+            <header
+                class="sm:w-8/12 md:w-7/12 lg:w-6/12 h-20 mx-auto grid place-items-center bg-gradient-to-r from-transparent via-zinc-100/5 border-y border-zinc-700 to-transparent"
+            >
+                <h2 class="text-4xl">Projets</h2>
+            </header>
+            <div
+                class="grid gap-12 py-24 xl:grid-cols-2 px-2 sm:w-9/12 mx-auto"
+            >
+                <Project
+                    title="Astradal - Map Designer"
+                    imageSrc="/map-designer-astradal.jpg"
+                    imageAlt="Projet Designer de carte Astradal "
+                >
+                    <div class="flex gap-3">
+                        <ViteIcon />
+                        <ReactIcon />
+                        <TypescriptIcon />
+                    </div>
+                    <div class="flex gap-3">
+                        <CSharpIcon />
+                        <PostgresqlIcon />
+                        <DockerIcon />
+                    </div>
+                </Project>
+                <Project
+                    link="https://www.janedoagency.com"
+                    title="Jane Do Agency - Site vitrine"
+                    imageSrc="/website-jane-do.jpg"
+                    imageAlt="Site vitrine jane do"
+                >
+                    <div class="flex gap-3">
+                        <NextjsIcon />
+                        <TailwindcssIcon />
+                    </div>
+                    <div class="flex gap-3">
+                        <SanityIcon />
+                    </div>
+                </Project>
+                <Project
+                    link="https://github.com/TanStack/form/pulls?q=is%3Apr+is%3Aclosed+author%3At-rosa"
+                    title="Tanstack - Contributeur Open Source"
+                    imageSrc="/tanstack.jpg"
+                    imageAlt="Logo Tanstack"
+                >
+                    <TypescriptIcon />
+                </Project>
+                <Project
+                    link="#"
+                    title="Ardonite - Bientôt!"
+                    imageSrc="/ardonite.gif"
+                    imageAlt="Ardonite project"
+                >
+                    <div class="flex gap-3 items-center">
+                        <TypescriptIcon />
+                        <CSharpIcon />
+                        <CPlusPlusIcon />
+                        <span class="text-xs text-zinc-400"
+                            >*différentes versions</span
+                        >
+                    </div>
+                </Project>
+            </div>
+        </section>
+    </main>
 </RootLayout>

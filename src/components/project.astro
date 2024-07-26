@@ -1,0 +1,22 @@
+---
+const { link, title, imageSrc, imageAlt } = Astro.props;
+---
+
+<a
+    target="_blank"
+    rel="noreferrer"
+    href={link}
+    class="border-zinc-600 border-dashed border hover:border-indigo-500 duration-200 group"
+>
+    <header
+        class="flex gap-6 border-b border-dashed border-zinc-600 p-3 items-center group-hover:border-indigo-500 duration-200"
+    >
+        <h3>{title}</h3>
+    </header>
+    <img src={imageSrc} alt={imageAlt} class="object-center p-3" />
+    <footer
+        class="flex gap-6 border-t border-dashed border-zinc-600 p-3 items-center group-hover:border-indigo-500 duration-200"
+    >
+        <slot />
+    </footer>
+</a>

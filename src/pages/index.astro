@@ -1,9 +1,18 @@
 ---
 import RootLayout from "@/layouts/root.astro";
-
 import Header from "@/components/header.astro";
 import Networks from "@/components/networks.astro";
-import Projects from "@/components/projects.astro";
+import ViteIcon from "@/components/icons/vite-icon.astro";
+import ReactIcon from "@/components/icons/react-icon.astro";
+import TypescriptIcon from "@/components/icons/typescript-icon.astro";
+import CSharpIcon from "@/components/icons/c-sharp-icon.astro";
+import CPlusPlusIcon from "@/components/icons/cplusplus-icon.astro";
+import NextjsIcon from "@/components/icons/nextjs-icon.astro";
+import TailwindcssIcon from "@/components/icons/tailwindcss-icon.astro";
+import SanityIcon from "@/components/icons/sanity-icon.astro";
+import DockerIcon from "@/components/icons/docker-icon.astro";
+import PostgresqlIcon from "@/components/icons/postgresql-icon.astro";
+import Project from "@/components/project.astro";
 ---
 
 <RootLayout>
@@ -23,12 +32,77 @@ import Projects from "@/components/projects.astro";
             <p class="text-xl text-zinc-300 max-w-80">
                 My name is Toma, I'm a software engineer and I'm currently
                 working at <a
+                    target="_blank"
+                    rel="noreferrer"
                     class="underline hover:text-indigo-500 duration-100"
                     href="https://www.astradal.com/">Astradal</a
                 > in Toulouse, France.
             </p>
             <Networks />
         </section>
-        <Projects />
+        <section id="projects">
+            <header
+                class="sm:w-8/12 md:w-7/12 lg:w-6/12 h-20 mx-auto grid place-items-center bg-gradient-to-r from-transparent via-zinc-100/5 border-y border-zinc-700 to-transparent"
+            >
+                <h2 class="text-4xl">Projects</h2>
+            </header>
+            <div
+                class="grid gap-12 py-24 xl:grid-cols-2 px-2 sm:w-9/12 mx-auto"
+            >
+                <Project
+                    title="Astradal - Map Designer"
+                    imageSrc="/map-designer-astradal.jpg"
+                    imageAlt="Astradal map designer project"
+                >
+                    <div class="flex gap-3">
+                        <ViteIcon />
+                        <ReactIcon />
+                        <TypescriptIcon />
+                    </div>
+                    <div class="flex gap-3">
+                        <CSharpIcon />
+                        <PostgresqlIcon />
+                        <DockerIcon />
+                    </div>
+                </Project>
+                <Project
+                    link="https://www.janedoagency.com"
+                    title="Jane Do Agency - Website"
+                    imageSrc="/website-jane-do.jpg"
+                    imageAlt="Jane Do Agency website"
+                >
+                    <div class="flex gap-3">
+                        <NextjsIcon />
+                        <TailwindcssIcon />
+                    </div>
+                    <div class="flex gap-3">
+                        <SanityIcon />
+                    </div>
+                </Project>
+                <Project
+                    link="https://github.com/TanStack/form/pulls?q=is%3Apr+is%3Aclosed+author%3At-rosa"
+                    title="Tanstack - Open Source Contributor"
+                    imageSrc="/tanstack.jpg"
+                    imageAlt="Tanstack logo"
+                >
+                    <TypescriptIcon />
+                </Project>
+                <Project
+                    link="#"
+                    title="Ardonite - Soon!"
+                    imageSrc="/ardonite.gif"
+                    imageAlt="Ardonite project"
+                >
+                    <div class="flex gap-3 items-center">
+                        <TypescriptIcon />
+                        <CSharpIcon />
+                        <CPlusPlusIcon />
+                        <span class="text-xs text-zinc-400"
+                            >*several versions</span
+                        >
+                    </div>
+                </Project>
+            </div>
+        </section>
     </main>
 </RootLayout>
