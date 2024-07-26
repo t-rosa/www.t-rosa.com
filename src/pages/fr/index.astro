@@ -28,7 +28,12 @@ import Project from "@/components/project.astro";
         <section
             class="flex justify-center py-24 px-1 flex-col text-center items-center gap-6"
         >
-            <h1 class="text-6xl font-black">Hello 👋</h1>
+            <h1 id="hello" class="text-6xl font-black group">
+                Hello <span
+                    class="text-6xl inline-block group-hover:animate-wave origin-[70%_70%]"
+                    >👋</span
+                >
+            </h1>
             <p class="text-xl text-zinc-300 max-w-80">
                 Je m'appelle Toma, je suis ingénieur logiciel et aujourd'hui je
                 travaille chez
