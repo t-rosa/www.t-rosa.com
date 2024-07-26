@@ -3,6 +3,7 @@ import RootLayout from "@/layouts/root.astro";
 
 import Header from "@/components/header.astro";
 import Networks from "@/components/networks.astro";
+import Projects from "@/components/projects.astro";
 ---
 
 <RootLayout>
@@ -14,8 +15,10 @@ import Networks from "@/components/networks.astro";
             />
         </a>
     </Header>
-    <section class="flex justify-center py-24 px-1">
-        <div class="space-y-9 text-center">
+    <main>
+        <section
+            class="flex justify-center py-24 px-1 flex-col text-center items-center gap-6"
+        >
             <h1 class="text-6xl font-black">Hello 👋</h1>
             <p class="text-xl text-zinc-300 max-w-80">
                 My name is Toma, I'm a software engineer and I'm currently
@@ -25,6 +28,7 @@ import Networks from "@/components/networks.astro";
                 > in Toulouse, France.
             </p>
             <Networks />
-        </div>
-    </section>
+        </section>
+        <Projects />
+    </main>
 </RootLayout>
