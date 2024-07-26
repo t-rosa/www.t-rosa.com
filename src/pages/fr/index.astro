@@ -1,15 +1,16 @@
 ---
-import RootLayout from "@/layouts/root.astro";
-
+import GithubLink from "@/components/github-link.astro";
+import LinkedinLink from "@/components/linkedin-link.astro";
 import Header from "@/components/header.astro";
+import RootLayout from "@/layouts/root.astro";
 import Networks from "@/components/networks.astro";
 ---
 
-<RootLayout>
+<RootLayout class="bg-[url('pattern.jpg')] text-zinc-100">
     <Header>
-        <a href="/fr" title="Switch to french">
+        <a href="/" title="Passer en anglais">
             <img
-                src="fr.svg"
+                src="gb.svg"
                 class="size-9 rounded-full border border-zinc-700"
             />
         </a>
@@ -18,11 +19,11 @@ import Networks from "@/components/networks.astro";
         <div class="space-y-9 text-center">
             <h1 class="text-6xl font-black">Hello 👋</h1>
             <p class="text-xl text-zinc-300 max-w-80">
-                My name is Toma, I'm a software engineer and I'm currently
-                working at <a
+                Je m'appelle Toma, je suis ingénieur logiciel et aujourd'hui je
+                travaille chez <a
                     class="underline hover:text-indigo-500 duration-100"
                     href="https://www.astradal.com/">Astradal</a
-                > in Toulouse, France.
+                > à Toulouse.
             </p>
             <Networks />
         </div>
