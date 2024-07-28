@@ -14,13 +14,17 @@ import SanityIcon from "@/components/icons/sanity-icon.astro";
 import DockerIcon from "@/components/icons/docker-icon.astro";
 import PostgresqlIcon from "@/components/icons/postgresql-icon.astro";
 import Project from "@/components/project.astro";
+import { Image } from "astro:assets";
 ---
 
 <RootLayout>
     <Header>
         <a href="/fr" title="Switch to french">
-            <img
+            <Image
+                alt="fr"
                 src="/fr.svg"
+                width={36}
+                height={36}
                 class="size-9 rounded-full border border-zinc-700"
             />
         </a>
@@ -59,7 +63,7 @@ import Project from "@/components/project.astro";
                 <Project
                     title="Astradal - Map Designer"
                     imageSrc="/map-designer-astradal.jpg"
-                    imageAlt="Astradal map designer project"
+                    imageAlt="Live map edition inside Astradal Map Designer application"
                 >
                     <div class="flex gap-3">
                         <ViteIcon />
@@ -76,7 +80,7 @@ import Project from "@/components/project.astro";
                     link="https://www.janedoagency.com"
                     title="Jane Do Agency - Website"
                     imageSrc="/website-jane-do.jpg"
-                    imageAlt="Jane Do Agency website"
+                    imageAlt="Jane Do Agency home page"
                 >
                     <div class="flex gap-3">
                         <TypescriptIcon />
@@ -91,7 +95,7 @@ import Project from "@/components/project.astro";
                     link="https://github.com/TanStack/form/pulls?q=is%3Apr+author%3At-rosa+"
                     title="Tanstack - Open Source Contributor"
                     imageSrc="/tanstack.jpg"
-                    imageAlt="Tanstack logo"
+                    imageAlt="Tanstack home page"
                 >
                     <TypescriptIcon />
                 </Project>
@@ -99,7 +103,7 @@ import Project from "@/components/project.astro";
                     link="https://www.maisondelamascotte.com"
                     title="Maison de la mascotte"
                     imageSrc="/maison-mascotte.jpg"
-                    imageAlt="Maison de la mascotte"
+                    imageAlt="Maison de la mascotte home page"
                 >
                     <div class="flex gap-3 items-center">
                         <TypescriptIcon />
@@ -111,7 +115,7 @@ import Project from "@/components/project.astro";
                     link="https://github.com/t-rosa/www.t-rosa.com"
                     title="Portfolio"
                     imageSrc="/portfolio.jpg"
-                    imageAlt="Portfolio"
+                    imageAlt="Portfolio home page"
                 >
                     <div class="flex gap-3 items-center">
                         <TypescriptIcon />
@@ -123,7 +127,7 @@ import Project from "@/components/project.astro";
                     link="https://www.dofus.com/fr/mmorpg/encyclopedie/ressources/12728-ardonite"
                     title="Ardonite - Soon!"
                     imageSrc="/ardonite.gif"
-                    imageAlt="Ardonite project"
+                    imageAlt="Extract from my game Ardonite"
                 >
                     <div class="flex gap-3 items-center">
                         <TypescriptIcon />

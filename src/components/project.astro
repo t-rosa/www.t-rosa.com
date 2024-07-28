@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 const { link, title, imageSrc, imageAlt } = Astro.props;
 ---
 
@@ -13,7 +15,13 @@ const { link, title, imageSrc, imageAlt } = Astro.props;
     >
         <h3>{title}</h3>
     </header>
-    <img src={imageSrc} alt={imageAlt} class="object-center p-3" />
+    <Image
+        src={imageSrc}
+        alt={imageAlt}
+        width={1400}
+        height={800}
+        class="object-center p-3"
+    />
     <footer
         class="flex gap-6 border-t border-dashed border-zinc-600 p-3 items-center group-hover:border-indigo-500 duration-200"
     >
