@@ -1,5 +1,6 @@
 ---
 import "@/index.css";
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <html lang={Astro.currentLocale} class="bg-zinc-800">
@@ -13,6 +14,7 @@ import "@/index.css";
             content="Toma Rosa web developper portfolio website"
         />
         <title>t-rosa</title>
+        <ViewTransitions />
     </head>
     <body class="bg-[url('/pattern.jpg')] text-zinc-100">
         <div id="container">
