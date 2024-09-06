@@ -18,128 +18,123 @@ import { Image } from "astro:assets";
 ---
 
 <RootLayout>
-    <Header>
-        <a href="/fr" title="Switch to french">
-            <Image
-                alt="fr"
-                src="/fr.svg"
-                width={36}
-                height={36}
-                class="size-9 rounded-full border border-zinc-700"
-            />
-        </a>
-    </Header>
-    <main>
-        <section
-            class="flex justify-center py-24 px-1 flex-col text-center items-center gap-6"
+  <Header>
+    <a href="/fr" title="Switch to french">
+      <Image
+        alt="fr"
+        src="/fr.svg"
+        width={36}
+        height={36}
+        class="size-9 rounded-full border border-zinc-700"
+      />
+    </a>
+  </Header>
+  <main>
+    <section
+      class="flex justify-center py-24 px-1 flex-col text-center items-center gap-6"
+    >
+      <h1 id="hello" class="text-6xl font-black group">
+        Hello <span
+          class="text-6xl inline-block group-hover:animate-wave origin-[70%_70%]"
+          >👋</span
         >
-            <h1 id="hello" class="text-6xl font-black group">
-                Hello <span
-                    class="text-6xl inline-block group-hover:animate-wave origin-[70%_70%]"
-                    >👋</span
-                >
-            </h1>
+      </h1>
 
-            <p class="text-xl text-zinc-300 max-w-80">
-                My name is Toma, I'm a software engineer and I'm currently
-                working at <a
-                    target="_blank"
-                    rel="noreferrer"
-                    class="underline hover:text-indigo-500 duration-100"
-                    href="https://www.astradal.com/">Astradal</a
-                > in Toulouse, France.
-            </p>
-            <Networks />
-        </section>
-        <section id="projects">
-            <header
-                class="sm:w-8/12 md:w-7/12 lg:w-6/12 h-20 mx-auto grid place-items-center bg-gradient-to-r from-transparent via-zinc-100/5 border-y border-zinc-700 to-transparent"
-            >
-                <h2 class="text-4xl">Projects</h2>
-            </header>
-            <div
-                class="grid gap-12 py-24 xl:grid-cols-2 px-2 sm:w-9/12 mx-auto"
-            >
-                <Project
-                    link="https://github.com/TanStack/form/pulls?q=is%3Apr+author%3At-rosa+"
-                    title="Tanstack - Open Source Contributor"
-                    imageSrc="/tanstack.jpg"
-                    imageAlt="Tanstack home page"
-                >
-                    <TypescriptIcon />
-                </Project>
-                <Project
-                    link="#"
-                    title="Astradal - Map Designer"
-                    imageSrc="/map-designer-astradal.jpg"
-                    imageAlt="Live map edition inside Astradal Map Designer application"
-                >
-                    <div class="flex gap-3">
-                        <ViteIcon />
-                        <TypescriptIcon />
-                        <ReactIcon />
-                    </div>
-                    <div class="flex gap-3">
-                        <CSharpIcon />
-                        <PostgresqlIcon />
-                        <DockerIcon />
-                    </div>
-                </Project>
-                <Project
-                    link="https://www.janedoagency.com"
-                    title="Jane Do Agency - Website"
-                    imageSrc="/website-jane-do.jpg"
-                    imageAlt="Jane Do Agency home page"
-                >
-                    <div class="flex gap-3">
-                        <TypescriptIcon />
-                        <NextjsIcon />
-                        <TailwindcssIcon />
-                    </div>
-                    <div class="flex gap-3">
-                        <SanityIcon />
-                    </div>
-                </Project>
-                <Project
-                    link="https://www.maisondelamascotte.com"
-                    title="Maison de la mascotte"
-                    imageSrc="/maison-mascotte.jpg"
-                    imageAlt="Maison de la mascotte home page"
-                >
-                    <div class="flex gap-3 items-center">
-                        <TypescriptIcon />
-                        <AstroIcon />
-                        <TailwindcssIcon />
-                    </div>
-                </Project>
-                <Project
-                    link="https://github.com/t-rosa/www.t-rosa.com"
-                    title="Portfolio"
-                    imageSrc="/portfolio.jpg"
-                    imageAlt="Portfolio home page"
-                >
-                    <div class="flex gap-3 items-center">
-                        <TypescriptIcon />
-                        <AstroIcon />
-                        <TailwindcssIcon />
-                    </div>
-                </Project>
-                <Project
-                    link="https://www.dofus.com/fr/mmorpg/encyclopedie/ressources/12728-ardonite"
-                    title="Ardonite - Soon!"
-                    imageSrc="/ardonite.gif"
-                    imageAlt="Extract from my game Ardonite"
-                >
-                    <div class="flex gap-3 items-center">
-                        <TypescriptIcon />
-                        <CSharpIcon />
-                        <CPlusPlusIcon />
-                        <span class="text-xs text-zinc-400"
-                            >*several versions</span
-                        >
-                    </div>
-                </Project>
-            </div>
-        </section>
-    </main>
+      <p class="text-xl text-zinc-300 max-w-80">
+        My name is Toma, I'm a software engineer and I'm currently working for <a
+          target="_blank"
+          rel="noreferrer"
+          class="underline hover:text-indigo-500 duration-100"
+          href="https://www.astradal.com/">Astradal</a
+        > in Toulouse, France.
+      </p>
+      <Networks />
+    </section>
+    <section id="projects">
+      <header
+        class="sm:w-8/12 md:w-7/12 lg:w-6/12 h-20 mx-auto grid place-items-center bg-gradient-to-r from-transparent via-zinc-100/5 border-y border-zinc-700 to-transparent"
+      >
+        <h2 class="text-4xl">Projects</h2>
+      </header>
+      <div class="grid gap-12 py-24 xl:grid-cols-2 px-2 sm:w-9/12 mx-auto">
+        <Project
+          link="https://github.com/TanStack/form/pulls?q=is%3Apr+author%3At-rosa+"
+          title="Tanstack - Open Source Contributor"
+          imageSrc="/tanstack.jpg"
+          imageAlt="Tanstack home page"
+        >
+          <TypescriptIcon />
+        </Project>
+        <Project
+          link="#"
+          title="Astradal - Map Designer"
+          imageSrc="/map-designer-astradal.jpg"
+          imageAlt="Live map edition inside Astradal Map Designer application"
+        >
+          <div class="flex gap-3">
+            <ViteIcon />
+            <TypescriptIcon />
+            <ReactIcon />
+          </div>
+          <div class="flex gap-3">
+            <CSharpIcon />
+            <PostgresqlIcon />
+            <DockerIcon />
+          </div>
+        </Project>
+        <Project
+          link="https://www.janedoagency.com"
+          title="Jane Do Agency - Website"
+          imageSrc="/website-jane-do.jpg"
+          imageAlt="Jane Do Agency home page"
+        >
+          <div class="flex gap-3">
+            <TypescriptIcon />
+            <NextjsIcon />
+            <TailwindcssIcon />
+          </div>
+          <div class="flex gap-3">
+            <SanityIcon />
+          </div>
+        </Project>
+        <Project
+          link="https://www.maisondelamascotte.com"
+          title="Maison de la mascotte"
+          imageSrc="/maison-mascotte.jpg"
+          imageAlt="Maison de la mascotte home page"
+        >
+          <div class="flex gap-3 items-center">
+            <TypescriptIcon />
+            <AstroIcon />
+            <TailwindcssIcon />
+          </div>
+        </Project>
+        <Project
+          link="https://github.com/t-rosa/www.t-rosa.com"
+          title="Portfolio"
+          imageSrc="/portfolio.jpg"
+          imageAlt="Portfolio home page"
+        >
+          <div class="flex gap-3 items-center">
+            <TypescriptIcon />
+            <AstroIcon />
+            <TailwindcssIcon />
+          </div>
+        </Project>
+        <Project
+          link="https://www.dofus.com/fr/mmorpg/encyclopedie/ressources/12728-ardonite"
+          title="Ardonite - Soon!"
+          imageSrc="/ardonite.gif"
+          imageAlt="Extract from my game Ardonite"
+        >
+          <div class="flex gap-3 items-center">
+            <TypescriptIcon />
+            <CSharpIcon />
+            <CPlusPlusIcon />
+            <span class="text-xs text-zinc-400">*several versions</span>
+          </div>
+        </Project>
+      </div>
+    </section>
+  </main>
 </RootLayout>
