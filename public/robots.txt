@@ -1,0 +1,17 @@
+# Robots.txt for www.t-rosa.com
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /private
+
+# Crawl delay (in seconds)
+Crawl-delay: 1
+
+# Specific rules for Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Sitemaps
+Sitemap: https://www.t-rosa.com/sitemap-index.xml
+Sitemap: https://www.t-rosa.com/sitemap-0.xml

@@ -6,9 +6,81 @@ import reactTemplate from "../assets/projects/react-template.png";
 import tanstackForm from "../assets/projects/tanstack-form.png";
 import Container from "../components/container.astro";
 import Layout from "../layouts/Layout.astro";
+
+const title = "Toma ROSA · Développeur Web Full Stack · Portfolio";
+const description =
+  "Développeur Full Stack spécialisé en cartographie et applications web. Expert React, ASP.NET Core, OpenLayers. Projets SaaS livrés pour collectivités et agences.";
+const keywords =
+  "développeur web, full stack, react, asp.net core, openlayers, cartographie, SaaS, toulouse, frontend, backend, javascript, typescript";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Toma ROSA",
+  url: "https://www.t-rosa.com",
+  description: description,
+  image: "https://www.t-rosa.com/og-image.png",
+  sameAs: [
+    "https://github.com/t-rosa",
+    "https://www.linkedin.com/in/toma-rosa/",
+    "https://bsky.app/profile/t-rosa.com",
+  ],
+  jobTitle: "Développeur Web Full Stack",
+  location: {
+    "@type": "City",
+    name: "Toulouse",
+  },
+  worksFor: {
+    "@type": "Organization",
+    name: "Astradal",
+    url: "https://www.astradal.com",
+  },
+  knowsAbout: [
+    "React",
+    "TypeScript",
+    "ASP.NET Core",
+    "OpenLayers",
+    "PostgreSQL",
+    "Cartographie",
+    "Web Development",
+    "Full Stack Development",
+  ],
+};
+
+const projects = [
+  {
+    name: "Astradal · Éditeur cartographique",
+    url: "https://app.astradal.com/home",
+    description:
+      "Studio web pour créer, éditer et partager des cartes métiers pour collectivités et opérateurs.",
+  },
+  {
+    name: "Jane Do Agency",
+    url: "https://www-janedoagency-com.vercel.app/",
+    description:
+      "Site vitrine pour agence musicale avec CMS Sanity et formulaires personnalisés.",
+  },
+  {
+    name: "TanStack Form - Contributions Open Source",
+    url: "https://github.com/TanStack/form/pulls?q=is%3Apr+author%3At-rosa+",
+    description:
+      "Contributions à la librairie TanStack Form : transformations, validations avancées.",
+  },
+  {
+    name: "React Template",
+    url: "https://github.com/t-rosa/ReactTemplate",
+    description:
+      "Template full-stack prêt pour la production avec React et ASP.NET Core.",
+  },
+];
 ---
 
-<Layout>
+<Layout
+  title={title}
+  description={description}
+  keywords={keywords}
+  structuredData={structuredData}
+>
   <Container class="border-b" }>
     <header class="border-x p-3">
       <h1 class="font-code text-center text-2xl font-bold sm:text-left">
@@ -54,6 +126,9 @@ import Layout from "../layouts/Layout.astro";
           </div>
           <div class="grid-background p-3">
             <Image
+              width="1280"
+              height="720"
+              priority
               src={editeurCartographique}
               alt="Éditeur cartographique"
               class="group-hover:border-primary/30 border duration-150"
@@ -74,6 +149,9 @@ import Layout from "../layouts/Layout.astro";
           </div>
           <div class="grid-background p-3">
             <Image
+              width="1280"
+              height="720"
+              priority
               src={janeDoAgency}
               alt="Jane Do Agency"
               class="group-hover:border-primary/30 border duration-150"
@@ -94,6 +172,8 @@ import Layout from "../layouts/Layout.astro";
           </div>
           <div class="grid-background p-3">
             <Image
+              width="1280"
+              height="720"
               src={tanstackForm}
               alt="Tanstack Form"
               class="group-hover:border-primary/30 border duration-150"
@@ -114,6 +194,8 @@ import Layout from "../layouts/Layout.astro";
           </div>
           <div class="grid-background p-3">
             <Image
+              width="1280"
+              height="720"
               src={reactTemplate}
               alt="React Template"
               class="group-hover:border-primary/30 border duration-150"

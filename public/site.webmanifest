@@ -1,4 +1,14 @@
 {
+  "name": "Toma ROSA · Développeur Web Full Stack",
+  "short_name": "t-rosa",
+  "description": "Portfolio de Toma ROSA - Développeur Web Full Stack spécialisé en cartographie et applications web",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "orientation": "portrait-primary",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "categories": ["technology"],
   "icons": [
     {
       "src": "/icon-192.png",
@@ -12,8 +22,5 @@
       "type": "image/png",
       "purpose": "any maskable"
     }
-  ],
-  "name": "t-rosa",
-  "short_name": "t-rosa",
-  "display": "browser"
+  ]
 }
