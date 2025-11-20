@@ -19,6 +19,11 @@ export default defineConfig({
         name: "Inter",
         cssVariable: "--font-inter",
       },
+      {
+        provider: fontProviders.fontsource(),
+        name: "IBM Plex Mono",
+        cssVariable: "--font-ibm-plex-mono",
+      },
     ],
   },
 });
