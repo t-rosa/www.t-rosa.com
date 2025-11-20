@@ -1,5 +1,126 @@
 ---
+import { Image } from "astro:assets";
+import editeurCartographique from "../assets/projects/editeur-cartographique.png";
+import janeDoAgency from "../assets/projects/jane-do-agency.png";
+import reactTemplate from "../assets/projects/react-template.png";
+import tanstackForm from "../assets/projects/tanstack-form.png";
+import Container from "../components/container.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout> Welcome </Layout>
+<Layout>
+  <Container class="border-b" }>
+    <header class="border-x p-3">
+      <h1 class="font-code text-center text-2xl font-bold sm:text-left">
+        toma<span class="text-primary">(</span>rosa<span class="text-primary"
+          >)</span
+        >
+      </h1>
+    </header>
+  </Container>
+  <Container class="border-b">
+    <section class="grid-background grid place-items-center border-x p-6">
+      <div>
+        <span class="font-code text-lg"
+          ><span class="text-primary">[</span>Web<span class="text-primary"
+            >]</span
+          ></span
+        >
+        <h2 class="text-center text-4xl font-bold">Developper</h2>
+      </div>
+    </section>
+  </Container>
+  <Container class="border-b">
+    <!-- Projects -->
+    <section class="border-x">
+      <div class="border-b">
+        <h2 class="font-code p-6 text-center text-3xl sm:text-left">
+          <span class="text-primary">[</span>Projects<span class="text-primary"
+            >]</span
+          >
+        </h2>
+      </div>
+      <div class="grid sm:grid-cols-2">
+        <!-- Project A -->
+        <a
+          href="https://app.astradal.com/home"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:bg-primary/10 group cursor-pointer border-b duration-150 sm:border-r"
+        >
+          <div class="flex items-center gap-3 border-b pr-3">
+            <code class="border-r p-2.5">01</code>
+            <h3 class="font-bold">Editeur cartographique</h3>
+          </div>
+          <div class="grid-background p-3">
+            <Image
+              src={editeurCartographique}
+              alt="Éditeur cartographique"
+              class="group-hover:border-primary/30 border duration-150"
+            />
+          </div>
+        </a>
+
+        <!-- Project B -->
+        <a
+          href="https://www-janedoagency-com.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:bg-primary/10 group cursor-pointer border-b duration-150"
+        >
+          <div class="flex items-center gap-3 border-b pr-3">
+            <code class="border-r p-2.5">02</code>
+            <h3 class="font-bold">Jane Do Agency</h3>
+          </div>
+          <div class="grid-background p-3">
+            <Image
+              src={janeDoAgency}
+              alt="Jane Do Agency"
+              class="group-hover:border-primary/30 border duration-150"
+            />
+          </div>
+        </a>
+
+        <!-- Project C -->
+        <a
+          href="https://github.com/TanStack/form/pulls?q=is%3Apr+author%3At-rosa+"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:bg-primary/10 group cursor-pointer border-b duration-150 sm:border-r sm:border-b-0"
+        >
+          <div class="flex items-center gap-3 border-b pr-3">
+            <code class="border-r p-2.5">03</code>
+            <h3 class="font-bold">Tanstack Form</h3>
+          </div>
+          <div class="grid-background p-3">
+            <Image
+              src={tanstackForm}
+              alt="Tanstack Form"
+              class="group-hover:border-primary/30 border duration-150"
+            />
+          </div>
+        </a>
+
+        <!-- Project D -->
+        <a
+          href="https://github.com/t-rosa/ReactTemplate"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:bg-primary/10 group group cursor-pointer duration-150"
+        >
+          <div class="flex items-center gap-3 border-b pr-3">
+            <code class="border-r p-2.5">04</code>
+            <h3 class="font-bold">React Template</h3>
+          </div>
+          <div class="grid-background p-3">
+            <Image
+              src={reactTemplate}
+              alt="React Template"
+              class="group-hover:border-primary/30 border duration-150"
+            />
+          </div>
+        </a>
+      </div>
+    </section>
+  </Container>
+</Layout>
