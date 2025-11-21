@@ -1,7 +1,9 @@
 ---
 import { Image } from "astro:assets";
+import astradal from "../assets/projects/astradal.png";
 import editeurCartographique from "../assets/projects/editeur-cartographique.png";
 import janeDoAgency from "../assets/projects/jane-do-agency.png";
+import maisonDeLaMascotte from "../assets/projects/maison-de-la-mascotte.png";
 import reactTemplate from "../assets/projects/react-template.png";
 import tanstackForm from "../assets/projects/tanstack-form.png";
 import Container from "../components/container.astro";
@@ -101,17 +103,15 @@ const structuredData = {
     </section>
   </Container>
   <Container class="border-b">
-    <!-- Projects -->
-    <section class="border-x">
+    <section id="projects" class="border-x">
       <div class="border-b">
         <h2 class="font-code p-6 text-center text-3xl sm:text-left">
           Projects<span class="text-primary">[]</span>
         </h2>
       </div>
       <div class="grid sm:grid-cols-2">
-        <!-- Project A -->
         <a
-          href="https://app.astradal.com/home"
+          href="https://app.astradal.com/home/"
           target="_blank"
           rel="noopener noreferrer"
           class="hover:bg-primary/10 group cursor-pointer border-b duration-150 sm:border-r"
@@ -136,7 +136,6 @@ const structuredData = {
           </div>
         </a>
 
-        <!-- Project B -->
         <a
           href="https://www-janedoagency-com.vercel.app/"
           target="_blank"
@@ -163,12 +162,11 @@ const structuredData = {
           </div>
         </a>
 
-        <!-- Project C -->
         <a
           href="https://github.com/TanStack/form/pulls?q=is%3Apr+author%3At-rosa+"
           target="_blank"
           rel="noopener noreferrer"
-          class="hover:bg-primary/10 group cursor-pointer border-b duration-150 sm:border-r sm:border-b-0"
+          class="hover:bg-primary/10 group cursor-pointer border-b duration-150 sm:border-r"
         >
           <div class="flex items-center gap-3 border-b pr-3">
             <code class="border-r p-2.5">
@@ -189,12 +187,11 @@ const structuredData = {
           </div>
         </a>
 
-        <!-- Project D -->
         <a
-          href="https://github.com/t-rosa/ReactTemplate"
+          href="https://github.com/t-rosa/ReactTemplate/"
           target="_blank"
           rel="noopener noreferrer"
-          class="hover:bg-primary/10 group group cursor-pointer duration-150"
+          class="hover:bg-primary/10 group group cursor-pointer border-b duration-150"
         >
           <div class="flex items-center gap-3 border-b pr-3">
             <code class="border-r p-2.5">
@@ -210,6 +207,56 @@ const structuredData = {
               height="720"
               src={reactTemplate}
               alt="React Template"
+              class="group-hover:border-primary/30 border-2 duration-150"
+            />
+          </div>
+        </a>
+
+        <a
+          href="https://qualif.astradal.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:bg-primary/10 group cursor-pointer border-b duration-150 sm:border-r sm:border-b-0"
+        >
+          <div class="flex items-center gap-3 border-b pr-3">
+            <code class="border-r p-2.5">
+              <span class="text-primary">[</span>4<span class="text-primary"
+                >]</span
+              >
+            </code>
+            <h3 class="font-bold">Astradal</h3>
+          </div>
+          <div class="p-3">
+            <Image
+              width="1280"
+              height="720"
+              src={astradal}
+              alt="Astradal"
+              class="group-hover:border-primary/30 border-2 duration-150"
+            />
+          </div>
+        </a>
+
+        <a
+          href="https://www.maisondelamascotte.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:bg-primary/10 group group cursor-pointer duration-150"
+        >
+          <div class="flex items-center gap-3 border-b pr-3">
+            <code class="border-r p-2.5">
+              <span class="text-primary">[</span>5<span class="text-primary"
+                >]</span
+              >
+            </code>
+            <h3 class="font-bold">Maison de la mascotte</h3>
+          </div>
+          <div class="p-3">
+            <Image
+              width="1280"
+              height="720"
+              src={maisonDeLaMascotte}
+              alt="Maison de la mascotte"
               class="group-hover:border-primary/30 border-2 duration-150"
             />
           </div>
