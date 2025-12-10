@@ -1,0 +1,95 @@
+---
+import { Image } from "astro:assets";
+import astradal from "../assets/projects/astradal.png";
+import editeurCartographique from "../assets/projects/editeur-cartographique.png";
+import janeDoAgency from "../assets/projects/jane-do-agency.png";
+import maisonDeLaMascotte from "../assets/projects/maison-de-la-mascotte.png";
+import reactWeaver from "../assets/projects/react-weaver.png";
+import tanstackForm from "../assets/projects/tanstack-form.png";
+import Container from "../components/container.astro";
+
+const projects = [
+  {
+    title: "Éditeur cartographique",
+    href: "https://app.astradal.com/home/",
+    image: editeurCartographique,
+    alt: "Éditeur cartographique",
+    priority: true,
+  },
+  {
+    title: "Astradal",
+    href: "https://www.astradal.com",
+    image: astradal,
+    alt: "Astradal",
+    priority: true,
+  },
+  {
+    title: "Jane Do Agency",
+    href: "https://www-janedoagency-com.vercel.app/",
+    image: janeDoAgency,
+    alt: "Jane Do Agency",
+  },
+  {
+    title: "React Weaver",
+    href: "https://github.com/t-rosa/ReactWeaver/",
+    image: reactWeaver,
+    alt: "React Weaver",
+  },
+  {
+    title: "Tanstack Form",
+    href: "https://github.com/TanStack/form/pulls?q=is%3Apr+author%3At-rosa+",
+    image: tanstackForm,
+    alt: "Tanstack Form",
+  },
+  {
+    title: "Maison de la mascotte",
+    href: "https://www.maisondelamascotte.com/",
+    image: maisonDeLaMascotte,
+    alt: "Maison de la mascotte",
+  },
+];
+---
+
+<Container class="border-b">
+  <section id="projects">
+    <div class="border-x">
+      <h2 class="font-code p-6 text-center text-3xl sm:text-left">
+        Projects<span class="text-primary">[]</span>
+      </h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2">
+      {
+        projects.map((project, index) => (
+          <a
+            href={project.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={project.alt}
+            data-even={index % 2 === 0}
+            class="hover:bg-primary/10 group border border-b-0 duration-150 sm:data-[even=true]:border-r-0"
+          >
+            <div class="flex items-center gap-1.5 border-b pr-1.5 sm:gap-3 sm:pr-3">
+              <code class="flex border-r p-1.5 sm:p-2.5">
+                <span class="text-primary">[</span>
+                {index}
+                <span class="text-primary">]</span>
+              </code>
+              <h3 class="text-xs font-bold sm:text-base">{project.title}</h3>
+            </div>
+            <div class="p-3">
+              <Image
+                width="1280"
+                height="720"
+                priority
+                src={project.image}
+                alt={project.alt}
+                class="group-hover:border-primary/30 border-2 duration-150"
+              />
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</Container>
