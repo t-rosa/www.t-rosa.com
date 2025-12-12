@@ -10,7 +10,6 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   experimental: {
-    svgo: true,
     fonts: [
       {
         provider: fontProviders.fontsource(),
