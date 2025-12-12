@@ -1,0 +1,48 @@
+---
+import Container from "../components/container.astro";
+
+const infos = [
+  {
+    key: "Email",
+    value: "toma.rosa@icloud.com",
+    href: "mailto:toma.rosa@icloud.com",
+  },
+  {
+    key: "Phone",
+    value: "+33 6 41 77 01 36",
+    href: "tel:+33641770136",
+  },
+];
+---
+
+<Container class="border-b">
+  <section id="contact">
+    <div class="border-x">
+      <h2 class="font-code p-6 text-center text-3xl sm:text-left">
+        <span class="text-primary">new</span>&nbsp;Contact<span
+          class="text-primary">()</span
+        >
+      </h2>
+    </div>
+    <div class="grid sm:grid-cols-2">
+      {
+        infos.map((info, index) => (
+          <a
+            href={info.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={info.key}
+            data-even={index % 2 === 0}
+            class="hover:bg-primary/10 group border border-b-0 p-3 duration-150 sm:data-[even=true]:border-r-0"
+          >
+            <p class="flex items-center gap-2 pl-3.5">
+              <span class="underline underline-offset-3">{info.key}</span>
+              <span class="text-primary text-xl font-bold">:</span>
+              {info.value}
+            </p>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</Container>
